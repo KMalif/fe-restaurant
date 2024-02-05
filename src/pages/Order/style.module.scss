@@ -1,0 +1,136 @@
+@import '@styles/base';
+
+.order {
+  .product {
+    padding-top: 10px;
+    .cardCont {
+      @include directionX;
+      justify-content: center;
+      .container {
+        width: 95%;
+        .card {
+          position: relative;
+          margin-top: 1%;
+          width: 100%;
+          height: 120px;
+          background-color: $color-white;
+          border-radius: 10px;
+          .header {
+            @include directionX;
+            align-items: center;
+            margin-left: 10px;
+            height: 100%;
+            img {
+              width: 50px;
+              height: 50px;
+            }
+            .title {
+              margin-left: 20px;
+              .comp {
+                font-size: 14px;
+                @include apply-at-xl-size {
+                  font-size: 24px;
+                }
+              }
+              .date {
+                font-size: 10px;
+                color: $color-grey;
+                @include apply-at-xl-size {
+                  font-size: 15px;
+                }
+              }
+            }
+            .orderMenu {
+              @include directionY;
+              font-size: 10px;
+              margin-left: 5%;
+              width: 50px;
+              gap: 10px;
+              height: 90%;
+              overflow-y: scroll;
+              padding-right: 30px;
+              @include apply-at-xl-size {
+                font-size: 14px;
+                width: 200px;
+              }
+            }
+            .orderMenu::-webkit-scrollbar {
+              width: 8px;
+            }
+
+            .orderMenu::-webkit-scrollbar-track {
+              background-color: #e4e4e4;
+              border-radius: 100px;
+            }
+
+            .orderMenu::-webkit-scrollbar-thumb {
+              border-radius: 100px;
+              background-image: linear-gradient(180deg, $color-dark-red 0%, $color-dark-red);
+            }
+            .note {
+              font-size: 10px;
+              margin-left: 2%;
+              width: 90px;
+              @include apply-at-xl-size {
+                font-size: 14px;
+                margin-left: 5%;
+                width: 300px;
+              }
+            }
+            .statusP {
+              font-size: 14px;
+              margin-left: 1%;
+              background-color: $color-dark-red;
+              padding: 5px;
+              border-radius: 20px;
+              position: absolute;
+              right: 0%;
+              bottom: 0;
+              color: $color-white;
+              cursor: pointer;
+              border: none;
+              @include apply-at-xl-size {
+                font-size: 18px;
+                padding: 12px;
+              }
+            }
+            .statusR {
+              font-size: 14px;
+              margin-left: 1%;
+              background-color: $color-yellow;
+              padding: 5px;
+              border-radius: 20px;
+              position: absolute;
+              right: 0%;
+              bottom: 0;
+              color: $color-white;
+              cursor: pointer;
+              border: none;
+              @include apply-at-xl-size {
+                font-size: 18px;
+                padding: 12px;
+              }
+            }
+            .statusS {
+              font-size: 14px;
+              margin-left: 1%;
+              background-color: $color-green;
+              padding: 5px;
+              border-radius: 20px;
+              position: absolute;
+              right: 0%;
+              bottom: 0;
+              color: $color-white;
+              cursor: pointer;
+              border: none;
+              @include apply-at-xl-size {
+                font-size: 18px;
+                padding: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

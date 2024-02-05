@@ -1,0 +1,181 @@
+@import '@styles/base';
+
+.createContainer {
+  @include directionX;
+  justify-content: center;
+  align-items: center;
+  min-height: 98vh;
+  background-image: url('../../static/images/backgroundLogin.png');
+  .error {
+    font-size: 15px;
+    color: $color-light-red;
+  }
+  .errorLogin {
+    font-size: 20px;
+    color: $color-white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $color-dark-red;
+  }
+  .card {
+    width: 80%;
+    min-height: 90%;
+    padding-bottom: 40px;
+    background-color: $color-white;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    .title {
+      padding-top: 1%;
+      font-size: 32px;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      letter-spacing: 2px;
+    }
+    .form {
+      padding-left: 5%;
+      form {
+        .name {
+          @include directionY;
+          padding-left: 1%;
+          label {
+            font-weight: 600;
+            font-size: 24px;
+          }
+          input {
+            width: 85%;
+            height: 40px;
+            border-radius: 5px;
+            border: 0.5px solid $color-dark-blue;
+            outline: none;
+            padding-left: 1%;
+          }
+          input:focus {
+            border: 2px solid $color-dark-blue;
+          }
+        }
+        .category {
+          @include directionY;
+          padding-left: 1%;
+          padding-top: 1%;
+          label {
+            font-weight: 600;
+            font-size: 24px;
+          }
+          select {
+            width: 86%;
+            height: 40px;
+            border-radius: 5px;
+            border: 0.5px solid $color-dark-blue;
+            outline: none;
+            padding-left: 1%;
+          }
+          input:focus {
+            border: 2px solid $color-dark-blue;
+          }
+        }
+        .description {
+          @include directionY;
+          padding-left: 1%;
+          padding-top: 1%;
+          label {
+            font-weight: 600;
+            font-size: 24px;
+          }
+          input {
+            width: 85%;
+            height: 40px;
+            border-radius: 5px;
+            border: 0.5px solid $color-dark-blue;
+            outline: none;
+            padding-left: 1%;
+          }
+          input:focus {
+            border: 2px solid $color-dark-blue;
+          }
+        }
+        .type {
+          @include directionY;
+          padding-left: 1%;
+          padding-top: 1%;
+          label {
+            font-weight: 600;
+            font-size: 24px;
+          }
+          input {
+            width: 85%;
+            height: 40px;
+            border-radius: 5px;
+            border: 0.5px solid $color-dark-blue;
+            outline: none;
+            padding-left: 1%;
+          }
+          input:focus {
+            border: 2px solid $color-dark-blue;
+          }
+        }
+        .image {
+          @include directionY;
+          padding-left: 1%;
+          padding-top: 1%;
+          label {
+            font-weight: 600;
+            font-size: 24px;
+          }
+          input {
+            width: 85%;
+            height: 40px;
+            border-radius: 5px;
+            border: 0.5px solid $color-dark-blue;
+            outline: none;
+            padding-left: 1%;
+          }
+          input:focus {
+            border: 2px solid $color-dark-blue;
+          }
+        }
+        .price {
+          @include directionY;
+          padding-left: 1%;
+          padding-top: 1%;
+          label {
+            font-weight: 600;
+            font-size: 24px;
+          }
+          input {
+            width: 85%;
+            height: 40px;
+            border-radius: 5px;
+            border: 0.5px solid $color-dark-blue;
+            outline: none;
+            padding-left: 1%;
+          }
+          input:focus {
+            border: 2px solid $color-dark-blue;
+          }
+        }
+        .buttonContainer {
+          @include directionX;
+          justify-content: center;
+          padding-top: 3%;
+          button {
+            width: 40%;
+            height: 45px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background-color: $color-dark-red;
+            color: $color-white;
+            cursor: pointer;
+          }
+          button:hover {
+            filter: brightness(120%);
+          }
+        }
+      }
+    }
+  }
+}
