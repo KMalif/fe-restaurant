@@ -62,7 +62,7 @@ const Home = ({ menus, baskets }) => {
   const userData = localStorage.getItem('persist:client');
   const parsedUserData = JSON.parse(userData);
   const token = parsedUserData.token;
-  let decoded = null;
+  let decoded;
   if (token && token.split('.').length === 3) {
     decoded = jwtDecode(token);
   }

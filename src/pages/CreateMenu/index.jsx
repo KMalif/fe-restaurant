@@ -16,13 +16,7 @@ const EditMenu = ({ category, error }) => {
   useEffect(() => {
     dispatch(getCategory());
   }, []);
-  const [formData, setFormData] = useState({
-    name: '',
-    categoryID: '',
-    description: '',
-    type: '',
-    price: '',
-  });
+  const [formData, setFormData] = useState({});
   const [file, setFile] = useState(null);
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
@@ -33,6 +27,7 @@ const EditMenu = ({ category, error }) => {
       ...prevData,
       [name]: value,
     }));
+    console.log(formData.categoryID, "<<pref formdata");
   };
 
   const handleSubmit = (e) => {
@@ -43,7 +38,9 @@ const EditMenu = ({ category, error }) => {
     formDataObj.append('description', formData.description);
     formDataObj.append('type', formData.type);
     formDataObj.append('price', formData.price);
+    formDataObj.append('qty', formData.qty);
     formDataObj.append('image', file);
+    console.log(formData, "<<Form data");
     dispatch(setCreateMenu({ formDataObj }));
   };
   const userData = localStorage.getItem('persist:client');
@@ -75,7 +72,7 @@ const EditMenu = ({ category, error }) => {
                 onChange={handleChange}
                 value={formData.name}
                 type="text"
-                placeholder="Indomie Rebus"
+                placeholder="Food name"
               />
             </div>
             <div className={style.category}>
@@ -130,6 +127,14 @@ const EditMenu = ({ category, error }) => {
               </label>
 
               <input name="price" onChange={handleChange} value={formData.price} type="number" placeholder="5000" />
+            </div>
+
+            <div className={style.price}>
+              <label htmlFor="qty">
+                <FormattedMessage id="app_edit_qty" />
+              </label>
+
+              <input name="qty" onChange={handleChange} value={formData.qty} type="number" placeholder="5" />
             </div>
 
             <div className={style.buttonContainer}>

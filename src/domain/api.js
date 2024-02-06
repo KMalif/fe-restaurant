@@ -42,5 +42,5 @@ export const editMenu = (id, data) =>
   callAPI(`/menu/${id}`, 'PUT', { 'Content-Type': 'multipart/form-data' }, {}, data);
 export const getCategory = (data) => callAPI(`/category`, 'GET', {}, {}, {});
 export const createMenu = (data) =>
-  callAPI(`/menu/create`, 'POST', { 'Content-Type': 'multipart/form-data' }, {}, data);
+  callAPI(`/menu`, 'POST', { 'Content-Type': 'multipart/form-data' }, {}, data);
 export const deleteMenu = (data) => callAPI(`/menu/${data}`, 'DELETE', {}, {}, {});

@@ -43,6 +43,7 @@ export default {
   app_edit_type: 'Type',
   app_edit_image: 'Image',
   app_edit_price: 'Price',
+  app_edit_qty: 'Quantity',
   app_edit_button: 'Save',
 
   app_create_title: 'Create Menu',
