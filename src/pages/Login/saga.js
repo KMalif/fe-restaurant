@@ -10,11 +10,10 @@ function* login(action) {
   try {
     const response = yield call(loginApi, action.payload);
     yield put({ type: SET_LOGIN, login: true });
-    yield put({ type: SET_TOKEN, token: response.data });
-    window.location.href = '/';
+    yield put({ type: SET_TOKEN, token: response?.token });
   } catch (e) {
     console.log(e.response.data.message);
-    yield put(loginFailure(e.response.data.message));
+    yield put(loginFailure(e?.response?.data?.message));
   } finally {
     yield put(setLoading(false));
   }

@@ -1,6 +1,6 @@
 export default {
   app_greeting: 'Hai dari Web!',
-  app_title_header: 'Wartech',
+  app_title_header: 'Restaurant',
   app_not_found: 'Halaman tidak ditemukan',
   app_lang_id: 'Bahasa Indonesia',
   app_lang_en: 'Bahasa Inggris',
@@ -12,13 +12,15 @@ export default {
   app_login_email: 'Email',
   app_login_password: 'Kata Sandi',
   app_login_forgot_password: 'Lupa Kata Sandi?',
+  app_login_to_register: 'Belum punya akun? Daftar',
 
   app_register_title: 'Daftar',
   app_register_email: 'Email',
-  app_register_fullName: 'Nama Lengkap',
-  app_register_phoneNumber: 'Nomor Handphone',
+  app_register_fullName: 'Nama',
+  app_register_phoneNumber: 'No Hp',
   app_register_password: 'Kata Sandi',
   app_register_forgot_password: 'Lupa Kata Sandi?',
+  app_register_to_login: 'Sudah punya akun? Masuk',
 
   app_forgot_title: 'Lupa Kata Sandi',
   app_forgot_email: 'Email',

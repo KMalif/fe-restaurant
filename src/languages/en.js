@@ -1,6 +1,6 @@
 export default {
   app_greeting: 'Hi from Web!',
-  app_title_header: 'Wartech',
+  app_title_header: 'Restaurant',
   app_not_found: 'Page not found',
   app_lang_id: 'Indonesian',
   app_lang_en: 'English',
@@ -12,6 +12,8 @@ export default {
   app_login_email: 'Email',
   app_login_password: 'Password',
   app_login_forgot_password: 'Forgot Password?',
+  app_login_to_register: 'Have no account? Register',
+  app_register_to_login: 'Have an account allready? Login',
 
   app_register_title: 'Register',
   app_register_email: 'Email',

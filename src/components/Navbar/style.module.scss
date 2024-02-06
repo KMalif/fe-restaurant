@@ -10,10 +10,11 @@
     @include directionX;
 
     color: var(--color-text);
-    padding: 1rem;
+    padding: 0.5rem;
     align-items: center;
     justify-content: space-between;
     font-size: 1rem;
+    margin-inline: 1rem;
 
     .logoImage {
       @include directionX;
@@ -21,8 +22,7 @@
       align-items: center;
 
       .logo {
-        width: 2rem;
-        height: 2rem;
+        height: 3rem;
         margin-right: 0.5rem;
         padding: 0;
       }
@@ -55,17 +55,20 @@
           }
           .loginButton {
             @include apply-at-xs-size {
-              background-color: $color-dark-red;
+              border: 1px solid $color-tangerin;
+              background-color: $color-white;
               padding: 5px 10px 5px 10px;
               border-radius: 10px;
               cursor: pointer;
+              color: $color-tangerin;
             }
             @include apply-at-xl-size {
               padding: 5px 25px 5px 25px;
             }
           }
           .loginButton:hover {
-            filter: brightness(120%);
+            background-color: $color-tangerin;
+            color: $color-white;
           }
         }
 
@@ -80,7 +83,7 @@
           }
           .registerButton {
             @include apply-at-xs-size {
-              background-color: $color-dark-red;
+              background-color: $color-tangerin;
               padding: 5px 10px 5px 10px;
               border-radius: 10px;
               cursor: pointer;
@@ -118,6 +121,7 @@
           font-weight: 700;
           font-size: 1rem;
           text-transform: uppercase;
+          color: $color-tangerin;
         }
 
         .arrow {

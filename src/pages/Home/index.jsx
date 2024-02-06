@@ -3,17 +3,17 @@ import { connect, useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createStructuredSelector } from 'reselect';
 import { FormattedMessage } from 'react-intl';
-import Swal from 'sweetalert2';
+import { jwtDecode } from 'jwt-decode';
 
-import style from './style.module.scss';
+import Swal from 'sweetalert2';
 import { deleteMenu, getAllMenus } from './actions';
 import { selectMenus } from './selectors';
 import { setBasket } from '@pages/Basket/actions';
 import { selectBaskets } from '@pages/Basket/selectors';
+
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-
-import { jwtDecode } from 'jwt-decode';
+import style from './style.module.scss';
 
 const Home = ({ menus, baskets }) => {
   const errorAdd = () => {

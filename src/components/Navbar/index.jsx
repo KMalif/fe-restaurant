@@ -4,15 +4,13 @@ import { FormattedMessage } from 'react-intl';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import logoNav from '@static/images/logoNav.png';
+import logoNav from '@static/images/brand_logo.svg';
 import ProfileIcon from '@static/images/profile.svg';
 
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import NightsStayIcon from '@mui/icons-material/NightsStay';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Logout from '@mui/icons-material/Logout';
 import ReceiptIcon from '@mui/icons-material/Receipt';
@@ -54,17 +52,17 @@ const Navbar = ({ title, locale, theme }) => {
   const handleLogout = () => {
     dispatch(setLogin(false));
     dispatch(setToken(null));
-    window.location.href = '/login';
+    navigate('/login');
   };
 
   const handleOrder = () => {
-    window.location.href = '/order';
+    navigate('/order');
   };
   const handleCreate = () => {
-    window.location.href = '/create-menu';
+    navigate('/create-menu');
   };
   const handleManage = () => {
-    window.location.href = '/manage-order';
+    navigate('/manage-order');
   };
 
   const onSelectLang = (lang) => {
@@ -87,13 +85,11 @@ const Navbar = ({ title, locale, theme }) => {
     decoded = jwtDecode(token);
   }
 
-  console.log(decoded);
   return (
     <div className={classes.headerWrapper} data-testid="navbar">
       <div className={classes.contentWrapper}>
         <div className={classes.logoImage} onClick={goHome}>
           <img src={logoNav} alt="logo" className={classes.logo} />
-          <div className={classes.title}>{title}</div>
         </div>
         <div className={classes.toolbar}>
           {isProfileDataAvailable ? (
@@ -171,12 +167,6 @@ const Navbar = ({ title, locale, theme }) => {
               <a href="/login">
                 <div className={classes.loginButton}>
                   <FormattedMessage id="app_login_title" />
-                </div>
-              </a>
-
-              <a href="/register">
-                <div className={classes.registerButton}>
-                  <FormattedMessage id="app_register_title" />
                 </div>
               </a>
             </div>

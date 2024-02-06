@@ -7,11 +7,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { selectLogin } from '@containers/Client/selectors';
+import { loginRequest } from './actions';
+import { selectLoginError } from './selectors';
 
 import LoginIcon from '@static/images/logoLogin.png';
 import style from './style.module.scss';
-import { loginRequest } from './actions';
-import { selectLoginError } from './selectors';
 
 const schema = yup.object().shape({
   email: yup.string().email('Invalid email format').required('Email is required'),
@@ -45,9 +45,9 @@ const Login = () => {
   return (
     <div className={style.loginContainer}>
       <div className={style.card}>
-        <div className={style.logo}>
+        {/* <div className={style.logo}>
           <img src={LoginIcon} alt="logo" />
-        </div>
+        </div> */}
         <div className={style.title}>
           <FormattedMessage id="app_login_title" />
         </div>
@@ -87,6 +87,11 @@ const Login = () => {
               <button type="submit">
                 <FormattedMessage id="app_login_title" />
               </button>
+            </div>
+            <div className={style.buttonContainer}>
+              <a href="/register">
+                  <FormattedMessage id="app_login_to_register" />
+              </a>
             </div>
           </form>
         </div>
