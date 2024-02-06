@@ -15,9 +15,10 @@
       font-size: 24px;
       font-weight: 600;
       letter-spacing: 2px;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      // border-top: 1px solid rgba(0, 0, 0, 0.1);
+      // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       padding-left: 2%;
+      color: $color-tangerin;
     }
     .card {
       @include directionX;
@@ -59,13 +60,14 @@
             padding-bottom: 1.5%;
             font-size: 16px;
             font-weight: 600;
+            color: $color-tangerin;
           }
         }
         .actionCard {
           position: relative;
           width: 10%;
           .btnBasket {
-            background-color: $color-black;
+            background-color: $color-tangerin;
             color: $color-white;
             width: 30px;
             height: 30px;

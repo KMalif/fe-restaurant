@@ -30,26 +30,6 @@
       width: 30%;
     }
 
-    .logo {
-      @include apply-at-xs-size {
-        display: none;
-      }
-      @include apply-at-xl-size {
-        display: block;
-        position: absolute;
-        background-color: $color-cream;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-        border-radius: 50%;
-        width: 28%;
-        height: 25%;
-        left: 35%;
-        top: -10%;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
     .title {
       padding-top: 50px;
       font-size: 32px;
@@ -58,9 +38,6 @@
       justify-content: center;
       letter-spacing: 2px;
 
-      @include apply-at-xl-size {
-        padding-top: 90px;
-      }
     }
     .form {
       padding-top: 30px;

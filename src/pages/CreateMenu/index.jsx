@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
+import { useNavigate } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
-
 import { connect, useDispatch, useSelector } from 'react-redux';
 
-import style from './style.module.scss';
 import { selectCategory, selectError } from './selectors';
 import { getCategory, setCreateMenu } from './actions';
 import { jwtDecode } from 'jwt-decode';
-import { useNavigate } from 'react-router-dom';
+
+import style from './style.module.scss';
 
 const EditMenu = ({ category, error }) => {
   const Navigate = useNavigate();

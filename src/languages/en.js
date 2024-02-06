@@ -8,14 +8,14 @@ export default {
   app_popup_error_message: 'Sorry, an error has occurred. Please try again later',
   app_popup_close_button_label: 'Close',
 
-  app_login_title: 'Login',
+  app_login_title: 'Signin',
   app_login_email: 'Email',
   app_login_password: 'Password',
   app_login_forgot_password: 'Forgot Password?',
-  app_login_to_register: 'Have no account? Register',
-  app_register_to_login: 'Have an account allready? Login',
+  app_login_to_register: 'Have no account yet? Signup',
+  app_register_to_login: 'Have an account allready? Signin',
 
-  app_register_title: 'Register',
+  app_register_title: 'Signup',
   app_register_email: 'Email',
   app_register_fullName: 'Full Name',
   app_register_phoneNumber: 'Phone Number',

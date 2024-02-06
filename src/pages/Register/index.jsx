@@ -10,7 +10,6 @@ import { selectLogin } from '@containers/Client/selectors';
 import { registerRequest } from './actions';
 import { selectRegisterError } from './selector';
 
-import LoginIcon from '@static/images/logoLogin.png';
 import style from './style.module.scss';
 
 const schema = yup.object().shape({
@@ -47,9 +46,6 @@ const Register = () => {
   return (
     <div className={style.registerContainer}>
       <div className={style.card}>
-        {/* <div className={style.logo}>
-          <img src={LoginIcon} alt="logo" />
-        </div> */}
         <div className={style.title}>
           <FormattedMessage id="app_register_title" />
         </div>

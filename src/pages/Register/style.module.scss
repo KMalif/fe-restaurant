@@ -30,25 +30,6 @@
       width: 30%;
     }
 
-    .logo {
-      @include apply-at-xs-size {
-        display: none;
-      }
-      @include apply-at-xl-size {
-        display: block;
-        position: absolute;
-        background-color: $color-cream;
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-        border-radius: 50%;
-        width: 28%;
-        height: 25%;
-        left: 35%;
-        top: -10%;
-      }
-      img {
-        width: 100%;
-      }
-    }
     .title {
       padding-top: 50px;
       font-size: 32px;
@@ -56,10 +37,6 @@
       display: flex;
       justify-content: center;
       letter-spacing: 2px;
-
-      @include apply-at-xl-size {
-        padding-top: 90px;
-      }
     }
     .form {
       padding-top: 30px;
@@ -75,7 +52,7 @@
                 font-weight: 600;
                 font-size: 18px;
                 @include apply-at-xl-size {
-                  font-size: 24px;
+                  font-size: 18px;
                 }
               }
               input {
@@ -88,7 +65,7 @@
                 color: $color-tangerin;
               }
               input:focus {
-                border: 2px solid $color-dark-blue;
+                border: 2px solid $color-tangerin;
               }
             }
             .phoneNumber {
@@ -100,7 +77,7 @@
                 font-weight: 600;
                 font-size: 18px;
                 @include apply-at-xl-size {
-                  font-size: 24px;
+                  font-size: 18px;
                 }
               }
               input {
@@ -112,7 +89,7 @@
                 padding-left: 3%;
               }
               input:focus {
-                border: 2px solid $color-dark-blue;
+                border: 2px solid $color-tangerin;
               }
             }
           }
@@ -125,7 +102,7 @@
                 font-weight: 600;
                 font-size: 18px;
                 @include apply-at-xl-size {
-                  font-size: 24px;
+                  font-size: 18px;
                 }
               }
               input {
@@ -137,7 +114,7 @@
                 padding-left: 3%;
               }
               input:focus {
-                border: 2px solid $color-dark-blue;
+                border: 2px solid $color-tangerin;
               }
             }
             .password {
@@ -148,7 +125,7 @@
                 font-weight: 600;
                 font-size: 18px;
                 @include apply-at-xl-size {
-                  font-size: 24px;
+                  font-size: 18px;
                 }
               }
               input {
@@ -160,7 +137,7 @@
                 padding-left: 3%;
               }
               input:focus {
-                border: 2px solid $color-dark-blue;
+                border: 2px solid $color-tangerin;
               }
             }
           }
