@@ -15,12 +15,14 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import Logout from '@mui/icons-material/Logout';
 import ReceiptIcon from '@mui/icons-material/Receipt';
 import AddIcon from '@mui/icons-material/Add';
+import PersonIcon from '@mui/icons-material/Person';
 
 import { setLocale, setTheme } from '@containers/App/actions';
 
 import classes from './style.module.scss';
 import { setLogin, setToken } from '@containers/Client/actions';
 import { jwtDecode } from 'jwt-decode';
+import { setBasket } from '@pages/Basket/actions';
 
 const Navbar = ({ title, locale, theme }) => {
   const dispatch = useDispatch();
@@ -52,15 +54,22 @@ const Navbar = ({ title, locale, theme }) => {
   const handleLogout = () => {
     dispatch(setLogin(false));
     dispatch(setToken(null));
+    dispatch(setBasket([]));
     navigate('/login');
+  };
+
+  const handleProfile = () => {
+    navigate('/profile')
   };
 
   const handleOrder = () => {
     navigate('/order');
   };
+
   const handleCreate = () => {
     navigate('/create-menu');
   };
+
   const handleManage = () => {
     navigate('/manage-order');
   };
@@ -93,7 +102,7 @@ const Navbar = ({ title, locale, theme }) => {
         </div>
         <div className={classes.toolbar}>
           {isProfileDataAvailable ? (
-            <>
+            <div>
               <img src={ProfileIcon} className={classes.profileIcon} alt="icon" onClick={handleClickProfile} />
               <Menu
                 anchorEl={anchorEl}
@@ -139,7 +148,7 @@ const Navbar = ({ title, locale, theme }) => {
                   </MenuItem>
                 )}
                 {decoded?.data?.role === 1 && (
-                  <>
+                  <div>
                     <MenuItem onClick={handleCreate}>
                       <ListItemIcon>
                         <AddIcon fontSize="small" />
@@ -152,8 +161,14 @@ const Navbar = ({ title, locale, theme }) => {
                       </ListItemIcon>
                       Manage Order
                     </MenuItem>
-                  </>
+                  </div>
                 )}
+                <MenuItem onClick={handleProfile}>
+                  <ListItemIcon>
+                    <PersonIcon fontSize="small" />
+                  </ListItemIcon>
+                  Profile
+                </MenuItem>
                 <MenuItem onClick={handleLogout}>
                   <ListItemIcon>
                     <Logout fontSize="small" />
@@ -161,7 +176,7 @@ const Navbar = ({ title, locale, theme }) => {
                   Logout
                 </MenuItem>
               </Menu>
-            </>
+            </div>
           ) : (
             <div className={classes.buttonContainer}>
               <a href="/login">

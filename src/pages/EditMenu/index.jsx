@@ -6,7 +6,7 @@ import { createStructuredSelector } from 'reselect';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { connect, useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Form, useNavigate, useParams } from 'react-router-dom';
 
 import { selectLogin } from '@containers/Client/selectors';
 
@@ -24,7 +24,6 @@ const EditMenu = ({ menu, category, editError }) => {
     dispatch(getMenuID(id));
   }, []);
 
-  const [menuData, setMenuData] = useState({});
   const [formData, setFormData] = useState({
     name: '',
     categoryID: '',
@@ -52,7 +51,7 @@ const EditMenu = ({ menu, category, editError }) => {
     formDataObj.append('description', formData.description);
     formDataObj.append('type', formData.type);
     formDataObj.append('price', formData.price);
-    formDataObj.append('image', file);
+    file && formDataObj.append('image', file);
     dispatch(setEditMenu({ id, formDataObj }));
   };
 
@@ -94,7 +93,7 @@ const EditMenu = ({ menu, category, editError }) => {
                 onChange={handleChange}
                 value={formData.name}
                 type="text"
-                placeholder="Indomie Rebus"
+                placeholder="Food name"
               />
             </div>
             <div className={style.category}>
@@ -120,7 +119,7 @@ const EditMenu = ({ menu, category, editError }) => {
                 onChange={handleChange}
                 value={formData.description}
                 type="text"
-                placeholder="Pakai telur"
+                placeholder="Description"
               />
             </div>
             <div className={style.type}>
@@ -151,7 +150,7 @@ const EditMenu = ({ menu, category, editError }) => {
                 onChange={handleChange}
                 value={formData.price}
                 type="number"
-                placeholder="Pakai telur"
+                placeholder="Price"
               />
             </div>
 

@@ -39,8 +39,6 @@ function* doEditMenu({ payload }) {
   yield put(setLoading(true));
   try {
     const { id, formDataObj } = payload;
-    console.log(formDataObj, '<<<<ACTION');
-    // const response = yield call(editMenu, id, action.payload.id.formDataObj);
     const response = yield call(editMenu, id, formDataObj);
     yield call(editSuccess);
   } catch (e) {

@@ -27,7 +27,6 @@ const EditMenu = ({ category, error }) => {
       ...prevData,
       [name]: value,
     }));
-    console.log(formData.categoryID, "<<pref formdata");
   };
 
   const handleSubmit = (e) => {
@@ -40,7 +39,6 @@ const EditMenu = ({ category, error }) => {
     formDataObj.append('price', formData.price);
     formDataObj.append('qty', formData.qty);
     formDataObj.append('image', file);
-    console.log(formData, "<<Form data");
     dispatch(setCreateMenu({ formDataObj }));
   };
   const userData = localStorage.getItem('persist:client');

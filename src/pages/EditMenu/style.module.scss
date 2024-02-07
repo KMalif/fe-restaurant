@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   min-height: 98vh;
-  background-image: url('../../static/images/backgroundLogin.png');
+  // background-image: url('../../static/images/backgroundLogin.png');
   .error {
     font-size: 15px;
     color: $color-light-red;
@@ -44,7 +44,7 @@
           padding-left: 1%;
           label {
             font-weight: 600;
-            font-size: 24px;
+            font-size: 18px;
           }
           input {
             width: 85%;
@@ -55,7 +55,7 @@
             padding-left: 1%;
           }
           input:focus {
-            border: 2px solid $color-dark-blue;
+            border: 2px solid $color-tangerin
           }
         }
         .category {
@@ -64,7 +64,7 @@
           padding-top: 1%;
           label {
             font-weight: 600;
-            font-size: 24px;
+            font-size: 18px;
           }
           select {
             width: 86%;
@@ -84,7 +84,7 @@
           padding-top: 1%;
           label {
             font-weight: 600;
-            font-size: 24px;
+            font-size: 18px;
           }
           input {
             width: 85%;
@@ -104,7 +104,7 @@
           padding-top: 1%;
           label {
             font-weight: 600;
-            font-size: 24px;
+            font-size: 18px;
           }
           input {
             width: 85%;
@@ -124,7 +124,7 @@
           padding-top: 1%;
           label {
             font-weight: 600;
-            font-size: 24px;
+            font-size: 18px;
           }
           input {
             width: 85%;
@@ -144,7 +144,7 @@
           padding-top: 1%;
           label {
             font-weight: 600;
-            font-size: 24px;
+            font-size: 18px;
           }
           input {
             width: 85%;
@@ -155,7 +155,7 @@
             padding-left: 1%;
           }
           input:focus {
-            border: 2px solid $color-dark-blue;
+            border: 2px solid $color-tangerin;
           }
         }
         .buttonContainer {
@@ -168,7 +168,7 @@
             border-radius: 10px;
             border: none;
             outline: none;
-            background-color: $color-dark-red;
+            background-color: $color-tangerin;
             color: $color-white;
             cursor: pointer;
           }

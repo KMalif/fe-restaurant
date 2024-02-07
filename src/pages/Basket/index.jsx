@@ -27,7 +27,7 @@ const Basket = ({ token, basketError }) => {
   useEffect(() => {
     if (basketError == 'Token Expired...' || basketError == 'No token provided') {
       dispatch(logoutUser());
-      window.location.href = '/login';
+      Navigate('/login');
     }
 
     if (userToken) {
@@ -94,13 +94,9 @@ const Basket = ({ token, basketError }) => {
                 </div>
                 <div className={style.actionCard}>
                   <div className={style.btnCont}>
-                    <div className={style.btnMinus}>
-                      <button onClick={() => decreaseQuantity(item.id)}>-</button>
-                    </div>
+                    <button className={style.btnPlus} onClick={() => decreaseQuantity(item.id)}>-</button>
                     <div className={style.qty}>{item.qty}</div>
-                    <div className={style.btnPlus}>
-                      <button onClick={() => increaseQuantity(item.id)}>+</button>
-                    </div>
+                    <button className={style.btnPlus} onClick={() => increaseQuantity(item.id)}>+</button>
                   </div>
                 </div>
               </div>
@@ -114,7 +110,7 @@ const Basket = ({ token, basketError }) => {
         </div>
 
         <div className={style.inputCont}>
-          <input type="text" name="note" value={note} onChange={handleNoteChange} placeholder="Good Daynya panas" />
+          <input type="text" name="note" value={note} onChange={handleNoteChange} placeholder="Notes for menu" />
         </div>
       </div>
       <div className={style.paySum}>

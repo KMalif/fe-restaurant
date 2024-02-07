@@ -63,8 +63,8 @@
             position: absolute;
             bottom: 20px;
             right: 30px;
-            button {
-              background-color: $color-black;
+            .btnPlus {
+              background-color: $color-tangerin;
               color: $color-white;
               width: 30px;
               height: 30px;
@@ -74,6 +74,20 @@
               border: none;
               cursor: pointer;
             }
+
+            .btnMinus {
+              background-color: $color-white;
+              color: $color-tangerin;
+              width: 30px;
+              height: 30px;
+              font-size: 30px;
+              border-radius: 50%;
+              outline: none;
+              border: 2px solid $color-tangerin;
+              cursor: pointer;
+              text-align: center;
+            }
+            
           }
         }
       }
@@ -128,7 +142,7 @@
         width: 120px;
         height: 40px;
         border-radius: 5px;
-        background-color: $color-light-red;
+        background-color: $color-tangerin;
         color: $color-white;
         outline: none;
         border: none;

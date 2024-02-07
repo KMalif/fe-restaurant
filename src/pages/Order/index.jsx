@@ -5,7 +5,6 @@ import { FormattedMessage } from 'react-intl';
 
 import style from './style.module.scss';
 
-import Logo from '@static/images/logoNav.png';
 import { selectError, selectOrder } from './selectors';
 import { getOrder } from './actions';
 import { logoutUser } from '@containers/Client/actions';
@@ -74,11 +73,10 @@ const Order = ({ order, orderError }) => {
               {sortedOrders?.map((item) => (
                 <div className={style.card}>
                   <div className={style.header}>
-                    <img src={Logo} alt="Logo" />
 
                     <div className={style.title}>
                       <div className={style.comp}>
-                        <p>Wartech {item.id}</p>
+                        <p>{item.id}</p>
                       </div>
                       <div className={style.date}>
                         <p>{formatDateString(item.date)}</p>

@@ -55,6 +55,7 @@ const Home = ({ menus, baskets }) => {
     };
     dispatch(setBasket([...basketItems, newItem]));
   };
+  
   const handleDelete = (id) => {
     dispatch(deleteMenu(id));
   };

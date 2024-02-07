@@ -43,8 +43,9 @@ export default {
   app_edit_type: 'Tipe',
   app_edit_image: 'Gambar',
   app_edit_price: 'Harga',
+  app_edit_qty: 'Jumlah menu',
   app_edit_button: 'Simpan',
 
-  app_create_title: 'Tambahkan Menu',
+  app_create_title: 'Tambah Menu',
   app_create_button: 'Tambah',
 };

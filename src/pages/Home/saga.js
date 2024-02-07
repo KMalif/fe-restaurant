@@ -13,7 +13,7 @@ function* deleteSuccess() {
   });
   setTimeout(() => {
     Swal.close();
-    window.location.reload();
+    // window.location.reload();
   }, 2000);
 }
 
